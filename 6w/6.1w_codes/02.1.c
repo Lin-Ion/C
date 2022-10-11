@@ -9,17 +9,18 @@ int main(void)
 	int num;
 	int div1[255] = { 0 };
 	int div2[255] = { 0 };
-	unsigned char index = 0; //signed¸¦ ¾²°Ô µÇ¸é index ¿ªÇÒÀ¸·Î ÀûÀıÇÏÁö ¾ÊÀ½.
-	char exception = 0;	//¿¹¿Ü Ã³¸®¿ë º¯¼ö
+	unsigned char index = 0; //signedë¥¼ ì“°ê²Œ ë˜ë©´ index ì—­í• ìœ¼ë¡œ ì ì ˆí•˜ì§€ ì•ŠìŒ.
+	char exception = 0;	//ì˜ˆì™¸ ì²˜ë¦¬ìš© ë³€ìˆ˜
 
-	printf("2¹ø ÇÁ·Î±×·¥\n");
-	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+	printf("2ë²ˆ í”„ë¡œê·¸ë¨\n");
+	printf("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
 	scanf_s("%d", &num);
 
 	start = clock();
 
-	printf("¾à¼ö: ");
-	for (int i = 1; i <= (int)sqrt(num); i++)
+	printf("ì•½ìˆ˜: ");
+	int max = (int)sqrt(num)
+	for (int i = 1; i <= max; i++)
 	{
 		if (num % i == 0)
 		{
@@ -30,21 +31,21 @@ int main(void)
 	}
 	index--;
 
-	//¾à¼ö=sqrt(Á¤¼ö)ÀÎ °æ¿ì ¿¹¿ÜÃ³¸®
+	//ì•½ìˆ˜=sqrt(ì •ìˆ˜)ì¸ ê²½ìš° ì˜ˆì™¸ì²˜ë¦¬
 	if (div1[index] == div2[index])
 		exception = 1;
 
-	for (int i = 0; i <= index - exception; i++)//0ºÎÅÍ index ±îÁö
+	for (int i = 0; i <= index - exception; i++)//0ë¶€í„° index ê¹Œì§€
 	{
 		printf("%d ", div1[i]);
 	}
-	for (int i = index; i >= 0; i--)//index ºÎÅÍ 0±îÁö
+	for (int i = index; i >= 0; i--)//index ë¶€í„° 0ê¹Œì§€
 	{
 		printf("%d ", div2[i]);
 	}
 
 	end = clock();
-	printf("\n°É¸° ½Ã°£: %d ms\n", (end - start));
+	printf("\nê±¸ë¦° ì‹œê°„: %d ms\n", (end - start));
 
 	return 0;
 }

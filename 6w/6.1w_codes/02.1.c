@@ -19,7 +19,7 @@ int main(void)
 	start = clock();
 
 	printf("약수: ");
-	int max = (int)sqrt(num)
+	int max = (int)sqrt(num);
 	for (int i = 1; i <= max; i++)
 	{
 		if (num % i == 0)

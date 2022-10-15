@@ -1,0 +1,10 @@
+최초설정
+git config --global user.name "Lin-Ion"
+git config user.email "20221085@edu.hanbat.ac.kr"
+git config --list
+
+git clone https://github.com/Lin-Ion/C.git
+
+git init
+git remote add origin https://github.com/Lin-Ion/C.git
+git pull origin master

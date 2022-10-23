@@ -33,7 +33,7 @@ int main()
 
 int even(int n) 
 {
-	char result;
+	int result;
 
 	result = (n & 0b1)^0b01; //홀수의 최하위비트는 0, vise versa 1
 
@@ -42,7 +42,7 @@ int even(int n)
 
 int absolute(int n)		//int형은 4바이트(32bit)
 {
-	char result;
+	int result;
 
 	if (n >> 31)	//첫 비트 읽기 (음수는 1 :: 양수는 0)
 		result = ~n + 1;	//2의 보수 +1
@@ -54,7 +54,7 @@ int absolute(int n)		//int형은 4바이트(32bit)
 
 int sign(int n)
 {
-	char result;
+	int result;
 	if (n == 0)	//0인 경우
 		result = 0;
 	else

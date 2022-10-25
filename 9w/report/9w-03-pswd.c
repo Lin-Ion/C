@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-//P/NP에 대한 새로운 자료형 추가 예정
 #define Pass 'P'
 #define NonPass 'N'
 #define Over 'O'
@@ -14,11 +13,11 @@ int main(void)
 	{
 		switch (check()) {
 		case Pass:
-			printf("통과");
+			printf("통과\n");
 			return 0;
 			break;
 		case Over:
-			printf("초과");
+			printf("초과\n");
 			return 0;
 			break;
 		case NonPass:

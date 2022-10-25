@@ -13,11 +13,11 @@ int main(void)
 	{
 		switch (check()) {
 		case Pass:
-			printf("���\n");
+			printf("통과\n");
 			return 0;
 			break;
 		case Over:
-			printf("�ʰ�\n");
+			printf("로그인 시도 횟수 초과\n");
 			return 0;
 			break;
 		case NonPass:
@@ -31,7 +31,7 @@ int check(void)
 	unsigned int tmp;
 	static char count = 0;
 	count++;
-	printf("��й�ȣ: ");
+	printf("비밀번호: ");
 	scanf_s("%ud", &tmp);
 	if (pswd == tmp)
 		return Pass;

@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 
 int even(int n);
 int absolute(int n);
@@ -7,45 +7,45 @@ int main()
 {
 	for (int i = -9; i < 10; i++)
 	{
-		printf("even(%d)ÀÇ °á°ú: ", i);
-		even(i) ? printf("Â¦¼ö\t") : printf("È¦¼ö\t");
+		printf("even(%d)ì˜ ê²°ê³¼: ", i);
+		even(i) ? printf("ì§ìˆ˜\t") : printf("í™€ìˆ˜\t");
 
-		printf("absolute(%d)ÀÇ °á°ú: %d\t", i, absolute(i));
+		printf("absolute(%d)ì˜ ê²°ê³¼: %d\t", i, absolute(i));
 
-		printf("sign(%d)ÀÇ °á°ú: ", i);
+		printf("sign(%d)ì˜ ê²°ê³¼: ", i);
 		switch (sign(i))
 		{
 		case 0:
-			printf("¿µ(0)");
+			printf("ì˜(0)");
 			break;
 		case 1:
-			printf("¾ç¼ö");
+			printf("ì–‘ìˆ˜");
 			break;
 		case -1:
-			printf("À½¼ö");
+			printf("ìŒìˆ˜");
 			break;
 		}
 		printf("\n");
 	}
-	
+
 	return 0;
 }
 
-int even(int n) 
+int even(int n)
 {
 	int result;
 
-	result = (n & 0b1)^0b01; //È¦¼öÀÇ ÃÖÇÏÀ§ºñÆ®´Â 0, vise versa 1
+	result = (n & 0b1) ^ 0b01; //í™€ìˆ˜ì˜ ìµœí•˜ìœ„ë¹„íŠ¸ëŠ” 0, vise versa 1
 
 	return result;
 }
 
-int absolute(int n)		//intÇüÀº 4¹ÙÀÌÆ®(32bit)
+int absolute(int n)		//intí˜•ì€ 4ë°”ì´íŠ¸(32bit)
 {
 	int result;
 
-	if (n >> 31)	//Ã¹ ºñÆ® ÀĞ±â (À½¼ö´Â 1 :: ¾ç¼ö´Â 0)
-		result = ~n + 1;	//2ÀÇ º¸¼ö +1
+	if (n >> 31)	//ì²« ë¹„íŠ¸ ì½ê¸° (ìŒìˆ˜ëŠ” 1 :: ì–‘ìˆ˜ëŠ” 0)
+		result = ~n + 1;	//2ì˜ ë³´ìˆ˜ +1
 	else
 		result = n;
 
@@ -55,10 +55,10 @@ int absolute(int n)		//intÇüÀº 4¹ÙÀÌÆ®(32bit)
 int sign(int n)
 {
 	int result;
-	if (n == 0)	//0ÀÎ °æ¿ì
+	if (n == 0)	//0ì¸ ê²½ìš°
 		result = 0;
 	else
-		result = (n>>31) ? -1 : 1;
+		result = (n >> 31) ? -1 : 1;
 
 	return result;
 }

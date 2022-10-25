@@ -13,7 +13,7 @@ int Sum(int a)
 int main() 
 {
 	int n;
-	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+	printf("ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ì‹œì˜¤: ");
 	scanf_s("%d", &n);
 
 	printf("%d\n",Sum(n));

@@ -8,3 +8,14 @@ git clone https://github.com/Lin-Ion/C.git
 git init
 git remote add origin https://github.com/Lin-Ion/C.git
 git pull origin master
+
+====
+파일 추가
+
+git add .
+git status
+git commit -m "..."
+git pull
+
+====
+git reflog

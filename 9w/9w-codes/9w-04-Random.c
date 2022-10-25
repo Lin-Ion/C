@@ -17,7 +17,7 @@ int get_random(void)
 	if (inited == 0) 
 	{
 		srand((unsigned)time(NULL)); 
-		printf("ÃÊ±âÈ­ ½ÇÇà\n");
+		printf("ì´ˆê¸°í™” ì‹¤í–‰");
 		inited++;
 	}
 	return rand();

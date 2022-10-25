@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -17,7 +17,7 @@ int get_random(void)
 	if (inited == 0) 
 	{
 		srand((unsigned)time(NULL)); 
-		printf("초기화 실행");
+		printf("초기화 실행\n");
 		inited++;
 	}
 	return rand();

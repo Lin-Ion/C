@@ -1,4 +1,4 @@
-//05 CycleFuntion
+﻿//05 CycleFuntion
 
 #include <stdio.h>
 

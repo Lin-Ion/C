@@ -1,4 +1,4 @@
-//02 DiceFace Count
+﻿//02 DiceFace Count
 
 #include <stdio.h>
 #include <stdlib.h>

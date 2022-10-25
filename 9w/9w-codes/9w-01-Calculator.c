@@ -1,4 +1,4 @@
-//01 Calculator
+ï»¿//01 Calculator
 
 #include <stdio.h>
 
@@ -15,7 +15,7 @@ int main()
 	char op;
 	while (1) {
 		x = 0, y = 0, op = 'q';
-		printf("¿¬»êÀ» ÀÔ·ÂÇÏ½Ã¿À: ");
+		printf("ì—°ì‚°ì„ ì…ë ¥í•˜ì‹œì˜¤: ");
 		scanf_s("%d %c %d", &x, &op,4, &y);
 
 		switch (op)
@@ -33,11 +33,11 @@ int main()
 			Div(x, y);
 			break;
 		default:
-			printf("ÀÔ·Â¿À·ù\n");
+			printf("ì…ë ¥ì˜¤ë¥˜\n");
 			return 0;
 			break;
 		}
-		printf("¿¬»ê °á°ú: %d\n\n", result);
+		printf("ì—°ì‚° ê²°ê³¼: %d\n\n", result);
 	}
 	return 0;
 }
@@ -45,28 +45,28 @@ int main()
 void Add(int a, int b) {
 	static int count=0;
 	count++;
-	printf("µ¡¼ÀÀº ÃÑ %d¹ø ½ÇÇàµÇ¾ú½À´Ï´Ù.\n",count);
+	printf("ë§ì…ˆì€ ì´ %dë²ˆ ì‹¤í–‰ë˜ì—ˆìŠµë‹ˆë‹¤.\n",count);
 
 	result = a + b;
 }
 void Sub(int a, int b) {
 	static int count = 0;
 	count++;
-	printf("»¬¼ÀÀº ÃÑ %d¹ø ½ÇÇàµÇ¾ú½À´Ï´Ù.\n", count);
+	printf("ëº„ì…ˆì€ ì´ %dë²ˆ ì‹¤í–‰ë˜ì—ˆìŠµë‹ˆë‹¤.\n", count);
 
 	result = a - b;
 }
 void Mul(int a, int b) {
 	static int count = 0;
 	count++;
-	printf("°ö¼ÀÀº ÃÑ %d¹ø ½ÇÇàµÇ¾ú½À´Ï´Ù.\n", count);
+	printf("ê³±ì…ˆì€ ì´ %dë²ˆ ì‹¤í–‰ë˜ì—ˆìŠµë‹ˆë‹¤.\n", count);
 
 	result = a * b;
 }
 void Div(int a, int b) {
 	static int count = 0;
 	count++;
-	printf("³ª´°¼ÀÀº ÃÑ %d¹ø ½ÇÇàµÇ¾ú½À´Ï´Ù.\n", count);
+	printf("ë‚˜ëˆ—ì…ˆì€ ì´ %dë²ˆ ì‹¤í–‰ë˜ì—ˆìŠµë‹ˆë‹¤.\n", count);
 
 	result = a / b;
 }

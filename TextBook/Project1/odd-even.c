@@ -1,10 +1,10 @@
-//х╕╪Ж:0 б╕╪Ж:1
+О╩©//М≥─Л┬≤:0 Л╖²Л┬≤:1
 #include <stdio.h>
 
 int main()
 {
 	int year;
-	printf("а╓╪Ж ют╥б:");
+	printf("Л═∙Л┬≤ Л·┘К═╔:");
 	scanf_s("%d", &year);
 
 	//result = (year+1)&1;

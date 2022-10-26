@@ -1,4 +1,5 @@
-﻿#include <stdio.h>
+﻿//랜덤함수 초기화
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 

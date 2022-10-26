@@ -17,7 +17,7 @@ int main(void)
 			return 0;
 			break;
 		case Over:
-			printf("초과\n");
+			printf("로그인 시도 횟수 초과\n");
 			return 0;
 			break;
 		case NonPass:

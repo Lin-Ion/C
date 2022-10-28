@@ -1,8 +1,8 @@
-﻿// 1/1 + ... + 1/(n-1) + 1/n
+﻿// 1/1 + 1/2 + ... + 1/(n-1) + 1/n
 
 #include <stdio.h>
 
-double Recursive(int n);
+double recursive(int n);
 
 int main()
 {
@@ -11,15 +11,15 @@ int main()
 	printf("정수를 입력하시오: ");
 	scanf_s("%d", &n);
 
-	printf("결과: %lf", Recursive(n));
+	printf("%lf", recursive(n));
 
 	return 0;
 }
 
-double Recursive(int n)
+double recursive(int n)
 {
 	if (n == 1)
-		return 1;	// + 1/1
+		return 1;
 
-	return 1.0 / n + Recursive(n - 1); // 1/n + 1/(n-1)
+	return (1.0 / n) + recursive(n - 1);
 }

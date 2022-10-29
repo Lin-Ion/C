@@ -1,10 +1,10 @@
 ﻿//이항 계수 ver.Dynamic Programming
 
 #include <stdio.h>
+#include <stdlib.h>
+int rec(int n, int k);
 
-int recursive_(int n, int k);
-
-int main_()
+int main()
 {
 	int n, k;
 
@@ -13,15 +13,25 @@ int main_()
 	printf("k = ");
 	scanf_s("%d", &k);
 
-	printf("결과: %d\n", recursive(n, k));
+	printf("결과: %d\n", rec(n, k));
 
 	return 0;
 }
 
-int recursive_(int n, int k)
+int rec(int n, int k)
 {
-	if (k == 0 | k == n)
+	static m[65][65] = { 0 };
+
+	if (k == 0 || k == n)
 		return 1;
 
-	return recursive(n - 1, k - 1) + recursive(n - 1, k);
+	if (!(m[n - 1][k - 1] && m[n - 1][k])) {
+		if (!m[n - 1][k - 1])
+			m[n - 1][k - 1] = rec(n - 1, k - 1);
+		if (!(m[n - 1][k]))
+			m[n - 1][k] = rec(n - 1, k);
+	}
+
+	m[n][k] = m[n - 1][k - 1] + m[n - 1][k];
+	return m[n][k];
 }

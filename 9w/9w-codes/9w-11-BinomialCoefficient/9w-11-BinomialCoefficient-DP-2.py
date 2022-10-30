@@ -5,13 +5,10 @@ def rec(n, k):
     if k == 0 or n == k:
         return 1
 
-    if not (m[n-1][k-1] and m[n-1][k]):  # 하나라도 몰루면
-        if not m[n-1][k-1]:  # rec(n-1,k-1) 몰루
-            m[n-1][k-1] = rec(n-1, k-1)
-        if not m[n-1][k]:   # rec(n-1,k) 몰루
-            m[n-1][k] = rec(n-1, k)
+    if m[n][k]:
+        return m[n][k]
 
-    m[n][k] = m[n-1][k-1]+m[n-1][k]
+    m[n][k] = rec(n-1, k-1)+rec(n-1, k)
     return m[n][k]
 
 

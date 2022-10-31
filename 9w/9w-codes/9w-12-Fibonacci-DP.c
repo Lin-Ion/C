@@ -1,15 +1,20 @@
 ﻿//피보나치 DP
 
 #include <stdio.h>
+#include <time.h>
+
 int fib(int n);
 
-int m[32] = { 0 };
+int m[40] = { 0 };
 
 int main()
 {
-
-	for (int i = 0; i < 32; i++)
+	clock_t t = clock();
+	
+	for (int i = 0; i < 40; i++)
 		printf("fib(%d) = %d\n", i, fib(i));
+	
+	printf("소요시간: %d ms\n", clock() - t);
 
 	return 0;
 }

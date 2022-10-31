@@ -4,44 +4,41 @@
 #define Pass 1
 #define Fail 0
 
-#define pswd 1234
+#define pswd 1234	//고정된 비밀번호
 
-int login_over = 0;	
-//로그인 자격은 전역변수이어야 함.
-//로그인 자격을 초기화 하거나, 
-//로그인 자격을 다른 함수(main)에서도 사용하려면 전역변수로 선언 해야함.
+unsigned __int8 count_over = 0;	//로그인(시도) 자격
 
 int check(void);
 
 int main(void)
 {
-	do
+	while (count_over==0) 
 	{
 		if (check() == Pass)
 			break;
-	} while (login_over == 0);
+	}
+	
+	return 0;
 }
 
 int check(void)
 {
-	static int count = 0;
+	static unsigned __int8 count = 0;	//정적 부호없는 8비트 카운트
 	unsigned int input;
 
-	if (count == 3) //앞에 위치해야 오버플로우를 방지가능
-	{
-		login_over = 1;
+	if (count >= 3){
+		count_over = 1;
 		printf("로그인 시도 횟수 초과\n");
 		return Fail;
 	}
-	count++;
+	count++;	//로그인 시도 횟수 1 증가
 
 	printf("비밀번호: ");
 	scanf_s("%ud", &input);
 
-	if (pswd == input) 
-	{
+	if (pswd == input){		//비밀번호 일치 여부 확인
 		printf("로그인 성공\n");
-		return Pass;
+		return Pass;	
 	}
 	else 
 		return Fail;

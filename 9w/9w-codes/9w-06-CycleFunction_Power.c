@@ -25,4 +25,3 @@ int power(int base, int power_raised)
 		return base;
 	return base * power(base, power_raised - 1);
 }
-//base를 포인트로 바꾸어서 사용한다면?

@@ -14,12 +14,11 @@ int main(void)
 }
 int get_random(void)
 {
-	static int inited = 0;
-	if (inited == 0) 
-	{
-		srand((unsigned)time(NULL)); 
+	static __int8 inited = 0;
+	if (inited == 0){
+		srand((unsigned)time(NULL)<<16); 
 		printf("초기화 실행\n");
-		inited++;
+		inited = 1;
 	}
 	return rand();
 }

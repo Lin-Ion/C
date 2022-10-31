@@ -17,7 +17,7 @@ int main(void)
 
 int countdigit(int n)
 {
-	if (n == 1)
+	if (n < 10)
 		return 1;
 	return 1 + countdigit(n / 10);
 }

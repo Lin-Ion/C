@@ -16,7 +16,7 @@ int main()
 	vector_add(x, y, z);
 	printf("벡터의 합 = [%lf %lf %lf]\n", z[0], z[1], z[2]);
 	
-	printf("백터의 내적 = %lf\n",vector_dot_product(x, y));
+	printf("벡터의 내적 = %lf\n",vector_dot_product(x, y));
 
 
 	return 0;

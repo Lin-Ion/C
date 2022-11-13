@@ -5,14 +5,14 @@
 
 int main()
 {
-	int decimal = 50;
-	int binary[SIZE];
+	unsigned int decimal = 32;
+	__int8 binary[SIZE];
 	int i;
 
-	printf("%d -> ", decimal);
+	printf("%u -> ", decimal);
 
 	for (i = 0; i < 32 && decimal>0; i++) {
-		binary[i] = decimal % 2;
+		binary[i] = decimal & 1;
 		decimal = decimal >> 1;
 	}i--;
 

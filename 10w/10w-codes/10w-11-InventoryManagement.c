@@ -26,12 +26,12 @@ int main()
 
 void numbers_print(int a[])
 {
-	printf("위치: ");
+	printf("번호: ");
 	for (int i = 1; i < SIZE+1; i++)
 		printf("%2d ", i);
 	printf("\n");
 
-	printf("번호: ");
+	printf("위치: ");
 	for (int i = 0; i < SIZE; i++)
 		printf("%2d ", a[i]);
 	printf("\n");

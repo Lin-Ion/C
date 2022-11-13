@@ -44,8 +44,8 @@ void scalar_mult(int a[][SIZE], int scalar)
 
 void transpose(int a[][SIZE], int b[][SIZE])
 {
-	for (int j = 0; j < SIZE; j++)
-		for (int i = 0; i < SIZE; i++)
+	for (int i = 0; i < SIZE; i++)
+		for (int j = 0; j < SIZE; j++)
 			b[i][j] = a[j][i];
 }
 

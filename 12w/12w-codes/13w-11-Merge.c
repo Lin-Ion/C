@@ -1,4 +1,4 @@
-﻿//09 탐색
+﻿//11 병합
 #include <stdio.h>
 
 #define SIZE 4
@@ -29,19 +29,19 @@ void array_merge(int* A, int* B, int* C, int size)
 		size_2 = size * 2;
 
 	for (iC = 0; iC < size_2; iC++) {
-		if (iA == size || iB == size) {
-			if (iA == size) {
-				C[iC] = B[iB]; iB++;
-				continue;
-			}else {
-				C[iC] = A[iA]; iA++;
-				continue;
-			}
+		if (iB == size) {
+			C[iC] = A[iA]; iA++;
+			continue;
+		}
+		if (iA == size) {
+			C[iC] = B[iB]; iB++;
+			continue;
 		}
 
 		if (A[iA] < B[iB]) {
 			C[iC] = A[iA]; iA++;
-		}else {
+		}
+		else {
 			C[iC] = B[iB]; iB++;
 		}
 	}

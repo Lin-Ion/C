@@ -26,7 +26,7 @@ int array_search(int* A, int size, int search_value)
 			return i;
 		}
 	}
-	return -1;
+	return -1; //찾지 못한 경우
 }
 void array_print(int* A, int size)
 {

@@ -24,7 +24,7 @@ int main(void)
 void get_lcm_gcd(int x, int y, int* p_lcm, int* p_gcd) 
 {
 	*p_gcd = get_gcd(x, y);
-	*p_lcm = (x * y) / (*p_gcd); 
+	*p_lcm = (x * y) / (*p_gcd);
 }
 int get_gcd(int x, int y)	//유클리드 호재법
 {

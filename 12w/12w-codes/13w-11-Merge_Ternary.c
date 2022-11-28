@@ -1,4 +1,4 @@
-﻿//09 탐색 삼항연산자
+﻿//11 병합 삼항연산자
 #include <stdio.h>
 
 #define SIZE 4
